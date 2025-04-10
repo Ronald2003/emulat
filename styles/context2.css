@@ -1,0 +1,249 @@
+/* Base styles */
+.article-container {
+    max-width: 1300px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #333;
+}
+
+.article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #470101;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #8B0000;
+}
+
+/* New layout with centered text and side images */
+.article-content {
+    display: flex;
+}
+
+/* Back Button Styles */
+.back-button-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.back-button {
+    position: fixed;
+    top: 100px;
+    left: 40%;
+    transform: translateX(calc(-50% - 450px));
+    padding: 8px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.back-button:hover {
+    background-color: #555;
+    transform: translateX(calc(-50% - 450px)) translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 1200px) {
+    .back-button {
+        left: 20px;
+        transform: none;
+    }
+    .back-button:hover {
+        transform: translateY(-1px);
+    }
+}
+
+@media (max-width: 768px) {
+    .back-button {
+        top: 90px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+/* Glass effect for text content */
+.glass-effect {
+    background: rgba(32, 32, 32, 0.473);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.062);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 25px;
+    /* Ensures text is readable on any background */
+    color: #333;
+}
+
+.text-content {
+    flex: 3;
+    padding-right: 2rem;
+}
+
+.text-content p {
+    text-align: center;
+    text-align: justify;
+    margin-bottom: 1rem;
+    color: #d6d6d6; /* Changed from #e6e6e6 to ensure readability */
+}
+
+.images-sidebar {
+    flex: 1;
+    position: sticky;
+    top: 6rem;
+    align-self: flex-start;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.article-image-side {
+    margin: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.article-image-side img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.article-image-side:hover img {
+    transform: scale(1.03);
+}
+
+.article-image-side figcaption {
+    padding: 0.8rem;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Animation styles */
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-out forwards;
+    opacity: 0;
+    animation-delay: calc(var(--order) * 0.1s);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .article-content {
+        flex-direction: column;
+    }
+    
+    .text-content {
+        padding-right: 0;
+    }
+    
+    .images-sidebar {
+        margin-top: 2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: static;
+    }
+    
+    .article-image-side {
+        flex: 0 0 calc(50% - 1rem);
+    }
+        /* Glass effect for text content */
+    .glass-effect {
+        background: rgba(32, 32, 32, 0.473);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 0px;
+        border: 1px solid rgba(255, 255, 255, 0.062);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        padding: 25px;
+        /* Ensures text is readable on any background */
+        color: #333;
+    }
+
+    .images-sidebar {
+        margin-left: 0rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-container {
+        padding: 0 0.5rem; /* Reduced from 1rem */
+        margin: 1.5rem auto; /* Reduced from 3rem */
+    }
+
+    .glass-effect {
+        width: 100%;
+        margin: 0;
+        padding: 15px 10px; /* Reduced side padding */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .text-content p {
+        text-align: left; /* Changed from justify for better mobile readability */
+        hyphens: auto; /* Enable hyphenation for better word breaks */
+        word-break: break-word; /* Prevent long words from overflowing */
+        margin-bottom: 1.2rem; /* Slightly increased for better spacing */
+        line-height: 1.6; /* Slightly reduced for mobile */
+        font-size: 0.95rem; /* Optional: slightly smaller font for mobile */
+    }
+
+    .article-title {
+        font-size: 1.6rem; /* Slightly reduced */
+        margin-bottom: 1.5rem; /* Reduced */
+        padding: 0 10px 0.5rem; /* Added side padding */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra adjustments for very small screens */
+    .glass-effect {
+        padding: 12px 8px;
+    }
+    
+    .text-content p {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+    
+    .article-title {
+        font-size: 1.4rem;
+    }
+}

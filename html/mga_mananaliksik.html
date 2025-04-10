@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mga mananaliksik | E-Mulat</title>
+    <link rel="icon" href="/image/E-Mulat_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/styles2.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,0,-25&icon_names=home" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="back-button-container">
+            <button class="back-button" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+        </div>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/image/E-Mulat_logo.png" alt="E-Mulat Logo" class="logo-img" width="60" height="60">
+                </a>
+            </div>
+            <ul class="nav-links" id="main-navigation">
+                <li><a href="/index.html" class="nav-link" aria-current="page">Home</a></li>
+                <li><a href="/html/e-mulat.html" class="nav-link">E-Mulat</a></li>
+                <li><a href="/html/mga_mananaliksik.html" class="nav-link active">Mga Mananaliksik</a></li>
+                <li class="dropdown">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="stories-dropdown">
+                        Mga Kwento
+                        <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true">
+                            <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </button>
+                    <ul id="stories-dropdown" class="dropdown-menu">
+                        <li><a href="/html/context.html" class="dropdown-link">Mga Kasaysayan ng Penitensya</a></li>
+                        <li><a href="/html/context2.html" class="dropdown-link">Natatanging Kwento sa Likod ng Penitensya</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+    
+
+
+    <main class="researchers-section">
+        <div class="section-header">
+            <h1 class="section-title">Mga Mananaliksik</h1>
+            <p class="section-subtitle">Kilalanin ang mga dedikadong mananaliksik sa likod ng proyektong E-Mulat</p>
+        </div>
+        
+        <div class="researchers-grid">
+            <!-- Researcher 1 -->
+            <div class="researcher-card">
+                <div class="researcher-content">
+                    <div class="researcher-image-container">
+                        <img src="/image/DEXTELINE.jpg" alt="Dexteline D. Dimaano" class="researcher-image" loading="lazy">
+                    </div>
+                    <div class="researcher-info">
+                        <h2 class="researcher-name">DIMAANO, DEXTELINE D.</h2>
+                        <div class="researcher-detail">
+                            <i class="fas fa-map-marker-alt detail-icon"></i>
+                            <span class="detail-text">P-5 Brgy. Matacong, San Lorenzo Ruiz, Camarines Norte</span>
+                        </div>
+                        <div class="researcher-detail">
+                            <i class="fas fa-envelope detail-icon"></i>
+                            <a href="mailto:dextelined@gmail.com" class="detail-text">dextelined@gmail.com</a>
+                        </div>
+                        <div class="researcher-detail">
+                            <i class="fas fa-graduation-cap detail-icon"></i>
+                            <span class="detail-text">Batsilyer ng Sekondaryang Edukasyon (Medyor sa Filipino)</span>
+                        </div>
+                        <div class="researcher-institution">
+                            <i class="fas fa-university institution-icon"></i>
+                            <span>Camarines Norte State College - Abaño Campus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Researcher 2 -->
+            <div class="researcher-card">
+                <div class="researcher-content">
+                    <div class="researcher-image-container">
+                        <img src="/image/DIANNE.jpg" alt="Dianne May Grayan" class="researcher-image" loading="lazy">
+                    </div>
+                    <div class="researcher-info">
+                        <h2 class="researcher-name">GRAYAN, DIANNE MAY</h2>
+                        <div class="researcher-detail">
+                            <i class="fas fa-map-marker-alt detail-icon"></i>
+                            <span class="detail-text">P-3 Brgy. Matacong, San Lorenzo Ruiz, Camarines Norte</span>
+                        </div>
+                        <div class="researcher-detail">
+                            <i class="fas fa-envelope detail-icon"></i>
+                            <a href="mailto:diannemaygrayan@gmail.com" class="detail-text">diannemaygrayan@gmail.com</a>
+                        </div>
+                        <div class="researcher-detail">
+                            <i class="fas fa-graduation-cap detail-icon"></i>
+                            <span class="detail-text">Batsilyer ng Sekondaryang Edukasyon (Medyor sa Filipino)</span>
+                        </div>
+                        <div class="researcher-institution">
+                            <i class="fas fa-university institution-icon"></i>
+                            <span>Camarines Norte State College - Abaño Campus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Footer Columns -->
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="/image/E-Mulat_logo.png" alt="E-Mulat Logo" width="80">
+                    <span class="logo-text">E-Mulat</span>
+                </div>
+                <p class="footer-about">Elektronikong kagamitan na maglalaman ng pinagmulan at natatanging kwento sa likod ng penitensya ng mga piling bayan sa Camarines Norte.</p>
+            </div>
+    
+            <div class="footer-column">
+                <h3 class="footer-title">Mga Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/html/e-mulat.html">Tungkol sa E-Mulat</a></li>
+                    <li><a href="/html/mga_mananaliksik.html">Mga Mananaliksik</a></li>
+                    <li><a href="/html/context.html">Mga Kasaysayan</a></li>
+                    <li><a href="/html/context2.html">Natatanging Kwento</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3 class="footer-title">Mga Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="https://images.app.goo.gl/a2KehsqLyGhuDxQa8" target="_blank">Penitensya sa bayan ng Daet</a></li>
+                    <li><a href="https://images.app.goo.gl/mYJ7KxVNGuwEm8eH7" target="_blank">Penitensya sa bayan ng Vinzons</a></li>
+                    <li><a href="https://www.esquiremag.ph/culture/lifestyle/holy-week-traditions-in-the-philippines-a2289-20190415-lfrm3?s=hlmr58gao3em9tn9sckcp92i22&fbclid=IwZXh0bgNhZW0CMTEAAR2ijq40ILaZtHM101j2cidlRLBo9OSUOaVuqsiR6FsU97ICnxPYGzvoIYY_aem_mFdHCBrAsDmcavqKt5O6Pw">
+                        Castro, A. (2019, April 14). Holy Week Traditions in the Philippines: Imitating Christ.esquiremag.ph. </a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="copyright">&copy; 2025 E-Mulat. Lahat ng karapatan ay nakalaan.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js">
+        // Add this script at the end of your HTML body to stagger paragraph animations
+document.addEventListener('DOMContentLoaded', function() {
+    const paragraphs = document.querySelectorAll('.animate-slide-up');
+    
+    paragraphs.forEach((paragraph, index) => {
+        paragraph.style.setProperty('--order', index);
+    });
+});
+    </script>
+</body>
+</html>
